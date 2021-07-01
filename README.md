@@ -34,49 +34,44 @@ For this Challenge, however, you aren't using webpack, but you do have an Expres
 
 ### You should add your idb.js file to the public/js/ directory of your application.
 
-You should add your service worker to the root of the public/ directory of your application.
-Once you’ve updated the existing budget tracker, it should provide the following functionality:
+### You should add your service worker to the root of the public/ directory of your application.
+### Once you’ve updated the existing budget tracker, it should provide the following functionality:
 
-The ability to enter deposits offline.
+- The ability to enter deposits offline.
 
-The ability to enter expenses offline.
+- The ability to enter expenses offline.
 
-Offline entries should be added to the tracker when the application is brought back online.
+- Offline entries should be added to the tracker when the application is brought back online.
 
 #### Web Manifest
 
-Because this will be a mobile-first application, you’ll also need to add a web manifest to your application with the app’s metadata, to let users’ devices know what they’re installing and how the app should look on the home screen.
+Because this will be a mobile-first application, you’ll also need to add a **web manifest** to your application with the app’s metadata, to let users’ devices know what they’re installing and how the app should look on the home screen.
 
-This manifest.json file for this project will contain the following properties:
+**This manifest.json file for this project will contain the following properties:**
 
-name
+*name*
 
-short_name
+*short_name*
 
-icons
+*icons*
 
-theme_color
+*theme_color*
 
-background_color
+*background_color*
 
-start_url
+*start_url*
 
-display
+*display*
 
 ## IMPORTANT
-In the module project, you used webpack to create the manifest.json file. For this application, you’ll need to create it manually and add it to the root of the public/ directory of your application. You can also review Module 19: Progressive Web Applications (PWA), Lesson 5: Convert the App to a PWA as a refresher on web manifests.
-Deployment to Heroku Using MongoDB Atlas
-
-Finally, the budget tracker has a server and uses MongoDB as its database, so you’ll need to deploy this application to Heroku using MongoDB Atlas. To review this process, look at Module 18: NoSQL, Lesson 5: Add Mongoose Validation, specifically 18.5.5: Deploy to Heroku.
+In the module project, you used webpack to **create the manifest.json file**. For this application, you’ll need to create it **manually** and **add it to the root of the public/ directory** of your application. You can also review Module 19: Progressive Web Applications (PWA), Lesson 5: Convert the App to a PWA as a refresher on web manifests.
+### Deployment to Heroku Using MongoDB Atlas
+Finally, the budget tracker has a server and *uses MongoDB as its database*, so you’ll *need to deploy this application to Heroku using MongoDB Atlas*. To review this process, look at Module 18: NoSQL, Lesson 5: Add Mongoose Validation, specifically 18.5.5: Deploy to Heroku.
 
 ## Technical Acceptance Criteria: 40%
 
 Satisfies all of the preceding acceptance criteria plus the following:
-
-Application must include a service worker.
-
-Application must include a web manifest.
-
-Application must use IndexedDB for offline functionality.
-
-Application must be deployed to Heroku.
+Application must include a **service worker**.
+Application must include a **web manifest**.
+Application must use **IndexedDB for offline functionality**.
+Application must be **deployed to Heroku**.
