@@ -1,77 +1,84 @@
-# my-budget-tracker
-Update an existing budget tracker application to allow for offline access and functionality. The user will be able to add expenses and deposits to their budget with or without a connection. If the user enters transactions offline, the total should be updated when they're brought back online
+<h1 align='center'>My Budget Tracker</h1>
 
-### Your Task
+### By likica * [Email me](mailto:fahrija_wyroski@live.com) * 
+  * [Deployed Application](https://drive.google.com/file/d/1b-E5oGb8CAF71Z-sjC9BJusf5sOTJ9-5/view) 
+<br></br>
 
-Giving users a fast and easy way to track their money is important, but allowing them to access that information at any time is even more important. Having offline functionality is paramount to the success of an application that handles users’ financial information.
+<p align="center">
+    <img src="https://img.shields.io/github/repo-size/likica/my-budget-tracker" />
+    <img src="https://img.shields.io/github/issues/likica/my-budget-tracker" />
+    <img src="https://img.shields.io/github/last-commit/likica/my-budget-tracker" >
+    </a>
+</p>
+  
+<p align="center">
+<img src="https://img.shields.io/badge/-node.js-green" />
+    <img src="https://img.shields.io/badge/Javascript-blue" />
+    <img src="https://img.shields.io/badge/-Heroku-pink" />
+    <img src="https://img.shields.io/badge/-Mongoose-purple"  />
+    <img src="https://img.shields.io/badge/-express-red" >
+</p>
 
-Your challenge this week is to update an existing budget tracker application to allow for offline access and functionality. The user will be able to add expenses and deposits to their budget with or without a connection. If the user enters transactions offline, the total should be updated when they're brought back online. Once you’ve made these changes, you’ll deploy the application to Heroku.
-#### User Story
+
+## User Story 
 AS AN avid traveler
 I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
 SO THAT my account balance is accurate when I am traveling 
 
-#### Acceptance Criteria
-GIVEN a budget tracker without an internet connection
-WHEN the user inputs an expense or deposit
-THEN they will receive a notification that they have added an expense or deposit
-WHEN the user reestablishes an internet connection
-THEN the deposits or expenses added while they were offline are added to their transaction history and their totals are updated
 
-### Getting Started
+## Table of contents
+  * [Description](#Description)
+  * [Installation Instructions](#installation-Instructions)
+  * [Usage Instructions](#Usage-Instructions)
+  * [Questions](#Questions)
+  * [Contributing](#Contributing)
+  * [Tests](#Tests)
+  * [License](#License)
+ 
+  # Description
+  ##### [Back to Table of Contents](#Table-of-Contents)
+  This application was built in aim to provide travellers easy budget management while travelling. Application allows offline budget management as well, so no worries when you're in oplace without wi-fi!
 
-Review the following lessons to complete this challenge.
+  ## Installation Instructions
+  ##### [Back to Table of Contents](#Table-of-Contents)
+  * User can use the application by navigating to the URL provided
 
-#### Offline Functionality
 
-You’ll need to use IndexedDB to add offline functionality. Review Module 18: NoSQL, Lesson 4: Add Offline Persistence with IndexedDB as a refresher on how to add this to your application.
+  ## Usage Instructions
+  ##### [Back to Table of Contents](#Table-of-Contents)
+  * User will be able to track their withdrawals and deposits with or without a data/internet connection
+  * Step 1:
+    - Enter your transaction name and amount, then choose type of your transaction (withdrawal or deposit)
+<p align="center" width="100%">
+    <img src="public/assets/images/trans_details.png" width="40%"/>
+</p>
 
-You’ll also need to add a service worker to your application. Review Module 19: Progressive Web Applications (PWA), Lesson 4: Using Service Workers as a refresher on how to add this to your application.
-TIPS: 
-The Food Festival application that you created in this module's lessons did not include an Express.js server, so you used the webpack-dev-server npm module to test the service worker with an HTTPS-enabled server.
+  * Step 2:
+    
+      - View all your transactions and balance
+    <p align="center" width="100%">
+    <img src="public/assets/images/overview.png" width="40%"/>
 
-For this Challenge, however, you aren't using webpack, but you do have an Express.js server provided to you in the starter code. Remember that Chrome DevTools makes it possible to test service workers on localhost in development. Simply click the Application tab, then select Service Workers from the menu on the left.
+</p>
+ 
+  ## Contributing
+  ##### [Back to Table of Contents](#Table-of-Contents)
+  Others are welcome to contribute, respecting the license which this project is listed under
 
-### You should add your idb.js file to the public/js/ directory of your application.
+  ## Tests
+  #### [Back to Table of Contents](#Table-of-Contents)
+ * No tests done
 
-### You should add your service worker to the root of the public/ directory of your application.
-### Once you’ve updated the existing budget tracker, it should provide the following functionality:
+  ## Questions
+  ##### [Back to Table of Contents](#Table-of-Contents)
+  * If you have any questions, please contact me at fahrija_wyroski@live.com
 
-- The ability to enter deposits offline.
+  ## License 
+  ##### [Back to Table of Contents](#Table-of-Contents)
+  * License Type: MIT
+    ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+    [License: MIT](https://opensource.org/licenses/MIT)
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-- The ability to enter expenses offline.
 
-- Offline entries should be added to the tracker when the application is brought back online.
-
-#### Web Manifest
-
-Because this will be a mobile-first application, you’ll also need to add a **web manifest** to your application with the app’s metadata, to let users’ devices know what they’re installing and how the app should look on the home screen.
-
-**This manifest.json file for this project will contain the following properties:**
-
-*name*
-
-*short_name*
-
-*icons*
-
-*theme_color*
-
-*background_color*
-
-*start_url*
-
-*display*
-
-## IMPORTANT
-In the module project, you used webpack to **create the manifest.json file**. For this application, you’ll need to create it **manually** and **add it to the root of the public/ directory** of your application. You can also review Module 19: Progressive Web Applications (PWA), Lesson 5: Convert the App to a PWA as a refresher on web manifests.
-### Deployment to Heroku Using MongoDB Atlas
-Finally, the budget tracker has a server and *uses MongoDB as its database*, so you’ll *need to deploy this application to Heroku using MongoDB Atlas*. To review this process, look at Module 18: NoSQL, Lesson 5: Add Mongoose Validation, specifically 18.5.5: Deploy to Heroku.
-
-## Technical Acceptance Criteria: 40%
-
-Satisfies all of the preceding acceptance criteria plus the following:
-Application must include a **service worker**.
-Application must include a **web manifest**.
-Application must use **IndexedDB for offline functionality**.
-Application must be **deployed to Heroku**.
+  _This README was generated by Likica with_ ❤️ [GitHub Profile](https://github.com/likica)
