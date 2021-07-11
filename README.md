@@ -1,7 +1,7 @@
 <h1 align='center'>My Budget Tracker</h1>
 
 ### By likica * [Email me](mailto:fahrija_wyroski@live.com) * 
-  * [Deployed Application](https://drive.google.com/file/d/1b-E5oGb8CAF71Z-sjC9BJusf5sOTJ9-5/view) 
+  * [Deployed Application](https://fw-my-budget-tracker.herokuapp.com) 
 <br></br>
 
 <p align="center">
