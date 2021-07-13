@@ -1,3 +1,10 @@
+const indexedDB =
+    window.indexedDB ||
+    window.mozIndexedDB ||
+    window.webkitIndexedDB ||
+    window.msIndexedDB ||
+    window.shimIndexedDB;
+
 let db;
 const request = indexedDB.open('budget', 1);
 
@@ -11,7 +18,7 @@ request.onsuccess = function (event) {
     db = event.target.result;
 
     if (navigator.onLine) {
-        sendTransaction();
+        uploadRecord();
     }
 };
 
@@ -70,4 +77,4 @@ function uploadRecord() {
 }
 
 // listen for app coming back online
-window.addEventListener('online', sendTransaction);
+window.addEventListener('online', uploadRecord);
