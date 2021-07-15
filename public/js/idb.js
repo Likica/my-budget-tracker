@@ -29,7 +29,7 @@ request.onerror = function (event) {
 };
 
 // This function will be executed if we attempt to submit a new transaction and there's no internet connection
-function saveRecord(record) {
+function saveTransaction(transaction) {
     // open a new transaction with the database with read and write permissions 
     const transaction = db.transaction(['new_transaction'], 'readwrite');
 
@@ -37,10 +37,10 @@ function saveRecord(record) {
     const transactionObjectStore = transaction.objectStore('new_transaction');
 
     // add record to your store with add method
-    transactionObjectStore.add(record);
+    transactionObjectStore.add(transaction);
 };
 
-function uploadTransaction() {
+function sendTransaction() {
     // open a transaction on your db
     const transaction = db.transaction(['new_transaction'], 'readwrite');
 
@@ -85,4 +85,4 @@ function uploadTransaction() {
 
 
 // listen for app coming back online
-window.addEventListener('online', uploadTransaction);
+window.addEventListener('online', sendTransaction);
