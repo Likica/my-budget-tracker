@@ -8,7 +8,7 @@ if ('serviceWorker' in navigator) {
 }
 let transactions = [];
 let myChart;
-fetch("/api/transaction")
+fetch("/api/transactions")
   .then(response => {
     return response.json();
   })
